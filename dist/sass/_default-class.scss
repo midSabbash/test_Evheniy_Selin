@@ -1,0 +1,208 @@
+
+//mobile button style
+.navbar-toggle {
+  position: absolute;
+  right: 0;
+  margin: 3px;
+  width: 32px;
+  height: 30px;
+  padding: 0;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition-delay: 0.3s;
+  .icon-bar {
+    background: #000;
+    position: absolute;
+    width: 100%;
+    z-index: 99999;
+    height: 3px;
+    &:first-child {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 9px;
+    }
+    &:last-child {
+      top: 22px;
+    }
+  }
+}
+
+//mobile btn  for sidebar
+.mobile-btn-sidebar {
+  float: left;
+  display: none;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  span {
+    background: #000;
+    position: absolute;
+    width: 17px;
+    height: 4px;
+    border-radius: 4px;
+    &:first-child {
+      top: 11px;
+      left: 11px;
+      -webkit-transform: rotate(40deg);
+      -moz-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+      -o-transform: rotate(40deg);
+      transform: rotate(40deg);
+    }
+    &:last-child {
+      top: 20px;
+      left: 11px;
+      -webkit-transform: rotate(-40deg);
+      -moz-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
+      -o-transform: rotate(-40deg);
+      transform: rotate(-40deg);
+    }
+  }
+  @media (max-width: 991px) {
+    display: block;
+  }
+  &.open {
+
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -ms-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+    span {
+      &:first-child {
+        left: 7px;
+        -webkit-transform: rotate(-40deg);
+        -moz-transform: rotate(-40deg);
+        -ms-transform: rotate(-40deg);
+        -o-transform: rotate(-40deg);
+        transform: rotate(-40deg);
+      }
+      &:last-child {
+        left: 7px;
+        -webkit-transform: rotate(40deg);;
+        -moz-transform: rotate(40deg);;
+        -ms-transform: rotate(40deg);;
+        -o-transform: rotate(40deg);;
+        transform: rotate(40deg);;
+      }
+    }
+  }
+}
+
+
+.navbar-toggle.collapsed {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+//slide arrow
+.carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: none;
+  background-color: transparent;
+  filter: alpha(opacity=50);
+  opacity: 0;
+  &:focus {
+    opacity: 0;
+  }
+  &.left {
+    background-image: none;
+  }
+  &.right {
+    background-image: none;
+  }
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: calc(66% + 5px);
+  width: calc(34% - 5px);
+  z-index: 10;
+  color: #fff;
+  text-align: left;
+  text-shadow: none;
+  background: #211a12;
+  opacity: .9;
+  border-radius: 0 10px 10px 0;
+}
+
+//slide indicators
+.carousel-indicators {
+  bottom: 15px;
+  right: 5px;
+  @media (max-width: 767px) {
+    bottom: 7px;
+    right: 10px;
+  }
+
+  li {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin: 0 3px;
+    cursor: pointer;
+    background-color: #6b685e;
+    box-shadow: -1px 1px 1px #a9a493;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    @media (max-width: 767px) {
+      width: 16px;
+      height: 16px;
+      margin: 0 7px;
+    }
+    &.active {
+      margin: 0 6px;
+      width: 26px;
+      height: 26px;
+      box-shadow: none;
+      background: linear-gradient(#6ddd49, #1a7912);
+      @media (max-width: 767px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+//vertical alignment elements
+.vertical-align::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.vertical-align > * {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -4px;
+}
